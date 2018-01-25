@@ -34,10 +34,15 @@ endif()
 # Read PYBUILDDIR value
 file(READ ${_pybuilddir}.backup PYBUILDDIR)
 
+# set(_sysconfigdata _sysconfigdata.py)
+# if(CMAKE_SYSTEM MATCHES "Darwin")
+   set(_sysconfigdata _sysconfigdata_m_darwin_.py)
+# endif()
+
 # Copy _sysconfigdata.py
 execute_process(COMMAND ${CMAKE_COMMAND} -E copy_if_different
-  ${BIN_BUILD_DIR}/${PYBUILDDIR}/_sysconfigdata.py
-  ${PYTHON_BINARY_DIR}/${EXTENSION_INSTALL_DIR}/_sysconfigdata.py
+  ${BIN_BUILD_DIR}/${PYBUILDDIR}/${_sysconfigdata}
+  ${PYTHON_BINARY_DIR}/${EXTENSION_INSTALL_DIR}/${_sysconfigdata}
   )
 
 # Create new file

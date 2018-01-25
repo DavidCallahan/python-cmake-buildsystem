@@ -318,7 +318,7 @@
 #cmakedefine HAVE_FTRUNCATE 1
 
 /* Define to 1 if you have the `futimens' function. [Python 3] */
-#cmakedefine HAVE_FUTIMENS 1
+#cmakedefine HAVE_FUTIMENS 0
 
 /* Define to 1 if you have the `futimes' function. [Python 3] */
 #cmakedefine HAVE_FUTIMES 1
@@ -1156,7 +1156,7 @@
 #cmakedefine HAVE_UTIL_H 1
 
 /* Define to 1 if you have the `utimensat' function. [Python 3] */
-#cmakedefine HAVE_UTIMENSAT 1
+#cmakedefine HAVE_UTIMENSAT 0
 
 /* Define to 1 if you have the `utimes' function. */
 #cmakedefine HAVE_UTIMES 1
